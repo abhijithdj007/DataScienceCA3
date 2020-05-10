@@ -135,9 +135,9 @@ ggplot(grp_gender_subset_cases, aes(month, Value, fill = case)) + geom_col(posit
 
 ###########################################################################################################
 
-# t.test(grp_gender_cases_df$Male,grp_gender_cases_df$Female, paired = TRUE, alt = "greater")
+t.test(grp_gender_cases_df$Male,grp_gender_cases_df$Female, paired = TRUE, alt = "greater")
 
-# t.test(grp_month_cases_df$Confirmed,grp_month_cases_df$Recovered, paired = TRUE, alt = "greater")
+t.test(grp_month_cases_df$Confirmed,grp_month_cases_df$Recovered, paired = TRUE, alt = "greater")
 
 test <- cor.test(grp_gender_cases_df$Male, grp_gender_cases_df$Female,
                  method = 'spearman', exact = FALSE) 
